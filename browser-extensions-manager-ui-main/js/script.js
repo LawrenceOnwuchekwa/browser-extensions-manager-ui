@@ -19,6 +19,8 @@ const lactive = document.querySelector('#lactive');
 const linactive = document.querySelector('#linactive');
 const first = document.querySelector('#first-left');
 const lfirst = document.querySelector('#lfirst-left');
+const moonImg = document.querySelector('.moon');
+const sunImg = document.querySelector('.sun');
 
 
 
@@ -28,8 +30,8 @@ function toggleTheme(){
         //switch to light mode
         //Hide dark mode theme
         gridcontainer.style.display ='none';
-        sunbtn.style.display='none';
-        moonbtn.style.display='block';
+        sunImg.style.display='none';
+        moonImg.style.display='flex';
         lightgridcontainer.style.display='grid'
         lightgridcontainer.style.gridTemplateColumns='260px 260px 260px';
         lightgridcontainer.style.gridTemplateRows='auto auto auto auto';
@@ -47,8 +49,8 @@ function toggleTheme(){
     }
     else{
         lightgridcontainer.style.display = 'none';
-        sunbtn.style.display='block';
-        moonbtn.style.display='none';
+        sunImg.style.display='flex';
+        moonImg.style.display='none';
         gridcontainer.style.display='grid';
         gridcontainer.style.gridTemplateColumns='260px 260px 260px';
         gridcontainer.style.gridTemplateRows='auto auto auto auto';
@@ -78,23 +80,10 @@ function darkTheme(){
 
 }
 
-/* function navLightButton(){
-    all.style.backgroundColor='white';
-    active.style.backgroundColor='white';
-    inactive.style.backgroundColor='white';
-}
-
-function navDarkButton(){
-    all.style.backgroundColor=`hsl(225, 23%, 24%)`;
-    active.style.backgroundColor=`hsl(225, 23%, 24%)`;
-    inactive.style.backgroundColor=`hsl(225, 23%, 24%)`;
-} */
 
 const sunbtn = document.querySelector('#first-right')
-const moonbtn = document.querySelector('#adjacent-button')
 
 sunbtn.addEventListener("click",toggleTheme);
-moonbtn.addEventListener("click",toggleTheme);
 
 let allComponent =() =>{
     all.style.backgroundColor=`hsl(3, 86%, 64%)`;
