@@ -21,7 +21,10 @@ const first = document.querySelector('#first-left');
 const lfirst = document.querySelector('#lfirst-left');
 const moonImg = document.querySelector('.moon');
 const sunImg = document.querySelector('.sun');
-
+const navdarktext = document.querySelector('.combined-logo');
+const navlighttext = document.querySelector('.combined-logolight');
+const sunbtn = document.querySelector('#first-right');;
+const moonbtn = document.querySelector('#first-rightlight');
 
 
 function toggleTheme(){
@@ -29,9 +32,11 @@ function toggleTheme(){
     if(lightTheme){
         //switch to light mode
         //Hide dark mode theme
+        sunbtn.style.display='none';
+        moonbtn.style.display='block';
+        navdarktext.style.display='none';
+        navlighttext.style.display='block';
         gridcontainer.style.display ='none';
-        sunImg.style.display='none';
-        moonImg.style.display='flex';
         lightgridcontainer.style.display='grid'
         lightgridcontainer.style.gridTemplateColumns='260px 260px 260px';
         lightgridcontainer.style.gridTemplateRows='auto auto auto auto';
@@ -48,9 +53,11 @@ function toggleTheme(){
 
     }
     else{
+        sunbtn.style.display='block';
+        moonbtn.style.display='none';
+        navdarktext.style.display='block';
+        navlighttext.style.display='none';
         lightgridcontainer.style.display = 'none';
-        sunImg.style.display='flex';
-        moonImg.style.display='none';
         gridcontainer.style.display='grid';
         gridcontainer.style.gridTemplateColumns='260px 260px 260px';
         gridcontainer.style.gridTemplateRows='auto auto auto auto';
@@ -81,9 +88,9 @@ function darkTheme(){
 }
 
 
-const sunbtn = document.querySelector('#first-right')
 
 sunbtn.addEventListener("click",toggleTheme);
+moonbtn.addEventListener("click",toggleTheme);
 
 let allComponent =() =>{
     all.style.backgroundColor=`hsl(3, 86%, 64%)`;
