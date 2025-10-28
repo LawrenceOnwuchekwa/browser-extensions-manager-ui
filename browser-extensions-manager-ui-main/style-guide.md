@@ -24,7 +24,7 @@ The designs were created to the following widths:
 
 ### Red
 
-- **Red 400**: `hsl(3, 86%, 64%)`
+- **Red 400**: `    `
 - **Red 500**: `hsl(3, 71%, 56%)`
 - **Red 700**: `hsl(3, 77%, 44%)`
 

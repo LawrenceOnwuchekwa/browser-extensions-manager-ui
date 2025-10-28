@@ -87,6 +87,8 @@ function darkTheme(){
 
 }
 
+dark
+
 
 
 sunbtn.addEventListener("click",toggleTheme);
